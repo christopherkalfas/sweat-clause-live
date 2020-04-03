@@ -1,19 +1,21 @@
 <%= form_for(@challenge) do |f| %>
     <div class="field">
         <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: "Catchy Name" %>
         <br>
         <%= f.label :activity %>
-        <%= f.text_field :activity %>
+        <%= f.text_field :activity, placeholder: "Push Ups" %>
         <br>
         <%= f.label :activity_reps %>
-        <%= f.text_field :activity_reps %>
+        <%= f.text_field :activity_reps, placeholder: "100" %>
         <br>
+       
         <%= f.label :start_date %>
-        <%= f.text_field :start_date %>
+        <%= f.text_field :start_date, placeholder: "YYYY-MM-DD" %>
         <br>
+        
         <%= f.label :end_date %>
-        <%= f.text_field :end_date %>
+        <%= f.text_field :end_date, placeholder: "YYYY-MM-DD" %>
         <br>
         <%= f.collection_select(:charity_id, Charity.all, :id, :name) %>
         <%= f.collection_select(:group_id, Group.all, :id, :name) %>
