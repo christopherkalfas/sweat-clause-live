@@ -1,0 +1,25 @@
+<h1>All Pledges</h1>
+
+<table>
+    <thead>
+        <tr>
+            <strong><h2>Amount</h2></strong>
+                <th colspan="10"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @pledges.each do |pledge| %>
+            <tr>
+                <td>$<%= link_to(pledge.amount, pledge_path(pledge)) %></td>
+                <td><%= pledge.charity.name %></td>
+                <td><%= link_to 'Edit', edit_pledge_path(pledge) %></td>
+                <td><%= link_to 'Destroy', pledge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+    </tbody>      
+</table>
+
+<br>
+
+<h2><%= link_to('New Pledge', new_pledge_path) %></h2>
