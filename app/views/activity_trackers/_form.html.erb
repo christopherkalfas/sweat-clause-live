@@ -4,10 +4,27 @@
         <%= f.collection_select(:challenge_id, Challenge.all, :id, :name) %>
         <br>
         <br>
-        <%= f.label :day %>
-        <%= f.select :day, ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] %>
-        <%= f.label :user_reps %>
-        <%= f.number_field :user_reps %>
+        <br>
+        <%= f.label :sunday_reps %>
+        <%= f.number_field :sunday_reps %>
+        <br>
+        <%= f.label :monday_reps %>
+        <%= f.number_field :monday_reps %>
+        <br>
+        <%= f.label :tuesday_reps %>
+        <%= f.number_field :tuesday_reps %>
+        <br>
+        <%= f.label :wednesday_reps %>
+        <%= f.number_field :wednesday_reps %>
+        <br>
+        <%= f.label :thursday_reps %>
+        <%= f.number_field :thursday_reps %>
+        <br>
+        <%= f.label :friday_reps %>
+        <%= f.number_field :friday_reps %>
+        <br>
+        <%= f.label :saturday_reps %>
+        <%= f.number_field :saturday_reps %>
         <br>
 
     </div>

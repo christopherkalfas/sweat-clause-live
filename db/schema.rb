@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_31_184457) do
+ActiveRecord::Schema.define(version: 2020_04_14_175312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2020_03_31_184457) do
     t.integer "user_reps"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "monday_reps"
+    t.integer "tuesday_reps"
+    t.integer "wednesday_reps"
+    t.integer "thursday_reps"
+    t.integer "friday_reps"
+    t.integer "saturday_reps"
+    t.integer "sunday_reps"
   end
 
   create_table "challenges", force: :cascade do |t|

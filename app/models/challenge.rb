@@ -6,4 +6,6 @@ class Challenge < ApplicationRecord
     validates :name, presence: true
     validates :charity_id, presence: true
     validates :group_id, presence: true
+
+
 end
